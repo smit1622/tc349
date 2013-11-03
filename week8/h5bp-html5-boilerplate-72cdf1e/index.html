@@ -21,8 +21,8 @@
 			<h1>Jeff Smith</h1>
 			<h2>Media and Information Student, East Lansing MI</h2>
 		</header>
-		<div id="map-location">
-			<p>Map</p>
+			<div id="map-location" data-0="background-image:url(img/map_bw.jpg);opacity:.5;" data-500="background-image:url(img/map.jpg);opacity:1;" data-800="opacity:.5;">
+		
 		</div>
 		<nav>
 			<ul>
@@ -39,7 +39,12 @@
 			</section>
 			<section id="porfolio">
 				<h3>Portfolio</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non laoreet purus. Nam dui ligula, vestibulum iaculis nibh vitae, convallis tincidunt est. Mauris nibh magna, eleifend ut mollis vel, placerat nec eros. Maecenas rhoncus dolor dapibus, laoreet est nec, luctus eros. Nunc scelerisque in purus vel sodales.</p>
+				<ul class="gallery">
+					<li><img alt="portfolio" src="img/portfolio.png"></li>
+					<li><img alt="portfolio" src="img/portfolio.png"></li>
+					<li><img alt="portfolio" src="img/portfolio.png"></li>			
+					<li><img alt="portfolio" src="img/portfolio.png"></li>
+				</ul>
 			</section>
 			<section id="books">
 				<h3>Books</h3>
@@ -51,10 +56,14 @@
 			</section>
 		</article>
 		
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/vendor/skrollr.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+	    <script type="text/javascript">
+	    var s = skrollr.init();
+	    </script>
 
     </body>
 </html>

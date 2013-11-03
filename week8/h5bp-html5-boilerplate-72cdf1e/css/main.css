@@ -108,7 +108,7 @@ header {
 	
 }
 
-h1,h2,p {
+h1,h2,p,ul {
 	margin: 0;
 }
 
@@ -126,9 +126,27 @@ h2{
 	color: #fff;
 }
 
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.gallery li {
+	display: inline-block;
+	margin: 0 2% 2% 0;
+	border: 5px solid #fff;
+	box-shaped: 0 0 10px #ccc;
+	transtion: border-color .3s;
+}
+
+.gallery li:hover{
+	border-color: #aeccf9;
+}
 #map-location {
-	background: #e3e3e3;
-	padding: 40px;
+	background: #f3f3f3;
+	background-position: center;
+	height: 250px;
+	transition: background-image 1s;
 }
 
 nav {
