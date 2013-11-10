@@ -21,10 +21,9 @@
 			<h1>Jeff Smith</h1>
 			<h2>Media and Information Student, East Lansing MI</h2>
 		</header>
-			<div id="map-location" data-0="background-image:url(img/map_bw.jpg);opacity:.5;" data-500="background-image:url(img/map.jpg);opacity:1;" data-800="opacity:.5;">
-		
+			<div id="map-location"data-0="background-image:url(img/map_bw.jpg);opacity:.5;" data-500="background-image:url(img/map.jpg);opacity:1;" data-800="opacity:.5;">
 		</div>
-		<nav>
+		<nav data-0="position:absolute;top:1200px;" data-800="position:absolute;top:800px;" data-1500="position:absolute;top:1500px;">
 			<ul>
 				<li><a href="#about">About</a></li>
 				<li><a href="#portfolio">Portfolio</a></li>
@@ -58,12 +57,41 @@
 		
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/vendor/skrollr.menu.min.js"></script>
         <script src="js/vendor/skrollr.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 	    <script type="text/javascript">
 	    var s = skrollr.init();
 	    </script>
+		<script type="text/javascript">
+			if ($(window).width() >600) {
+				var s = skrollr.init(/*other stuff*/);
 
+				//The options (second parameter) are all optional. The values shown are the default values.
+				skrollr.menu.init(s, {
+				    //skrollr will smoothly animate to the new position using `animateTo`.
+				    animate: true,
+
+				    //The easing function to use.
+				    easing: 'sqrt',
+
+				    //How long the animation should take in ms.
+				    duration: function(currentTop, targetTop) {
+				        //By default, the duration is hardcoded at 500ms.
+				        return 500;
+
+				        //But you could calculate a value based on the current scroll position (`currentTop`) and the target scroll position (`targetTop`).
+				        //return Math.abs(currentTop - targetTop) * 10;
+				    },
+
+				    //If you pass a handleLink function you'll disable `data-menu-top` and `data-menu-offset`.
+				    //You are in control where skrollr will scroll to. You get the clicked link as a parameter and are expected to return a number.
+				    handleLink: function(link) {
+				        //return 400;//Hardcoding 400 doesn't make much sense.
+				    }
+				});
+			}
+		</script>
     </body>
 </html>

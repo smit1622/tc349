@@ -154,6 +154,21 @@ nav {
 	width: 250px;
 }
 
+nav ul {
+	margin: 30px 0 0 40px;
+}
+
+nav a {
+	color: #424242;
+	text-decoration: none;
+	display: block;
+	padding: 10px;
+	border: 1px solid #e3e3e3;
+}
+
+nav a:hover {
+	background: #f3f3f3;
+}
 article {
 	margin-left: 300px;
 }
@@ -272,8 +287,20 @@ article {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+@media (max-width: 800px) {
+    nav {
+		float: none;
+		width: auto;
+	}
+	article {
+		marginZ: 20px;
+	}
+}
+@media (max-width: 600px) {
+	header {
+		background: url(../img/head_me.jpg);
+		height: 648px;
+	}
 }
 
 @media print,
