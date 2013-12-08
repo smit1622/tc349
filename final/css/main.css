@@ -51,7 +51,114 @@ hr {
     margin: 1em 0;
     padding: 0;
 }
+#header {
+	background: #005397;
+	color: white;
+	padding-left: 50px;
+	margin-top: 0;
+	height: 87px;
+}
+#header h1 {
+	margin: 0;
+}
+#header h2 {
+	margin: 0;
+}
+#title {
+	width: 400px;
+	float: left;
+	height:80px;
+	padding-top: 7px;
+}
+#mich_map {
+	width: 200px;
+	float: left;
+	height: 80px;
+}
+#header img {
+	margin-top: 0;
+	border: 0px solid #005397;
+}
+body {
+}
+nav {
+	list-style: none;
+	background-color: #0094d6;
+	padding-left: 10%;
+	clear: both;
+}
+nav ul{
+	margin: 0;
+	padding-left: 0;
+	padding-right: 0;
+}
+nav a{
+	padding-right: 13px;
+	padding-left: 13px;
+	text-decoration: none;
+	color: white;
+}
+nav a:visited {
+	color: white;
+}
+nav li {
+	display:inline;
+	margin-left: 50px;
+}
+#main {
+	width: 500px;
+	margin: 10px 10px 10px 10px;
+	float: left;
+}
+#action_center {
+	width: 550px;
+	float: left;
+	margin: 10px 10px 10px 10px;
+	border: solid 5px #0066FF;
+	padding-bottom: 25px;
+	text-align: center;
+}
+#action_center a {
+	text-decoration: none;
+}
+#action_center a:visited {
+	color: black;
+}
+#mission_statement {
+	border: solid 2px red;
+	margin: 25px 25px 25px 25px;
+	padding: 5px 5px 5px 5px;
+}
+#matt_port {
+	margin: 10px 30px 30px 30px;
+	border: solid 2px black;
+}
+img {
+	margin: 10px 0 0 0;
+	border: solid 1px black;
+}
+#contact {
+	padding-left: 50px;
+	background-color: #6699FF;
+}
+#about {
+	margin: 15px 15px 20px 30px;
+	padding: 2px 20px 2px 30px;
+	background-color: #6699FF;
+	width: 66%;
+}
+#footer {
+	clear: both;
+	border: solid 1px black;
+	background-color: #8094A6;
+	padding: 10px;
+	margin-bottom: -5px;
+	font-size: small;
+}
 
+#footer p {
+	margin: 0;
+}
 /*
  * Remove the gap between images, videos, audio and canvas and the bottom of
  * their containers: h5bp.com/i/440
@@ -97,81 +204,14 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-body {
-	border-top: 10px solid #424242;
-	
-}
 
-header {
-	background: url(../img/head.jpg);
-	height: 648px;
-	
-}
 
-h1,h2,p,ul {
-	margin: 0;
-}
 
-h1,h2 {
-	padding-left: 40px;
-}
 
-h1{
-	padding-top: 540px;
-	color: #fff
-}
 
-h2{
-	font-weight: normal;
-	color: #fff;
-}
 
-ul {
-	list-style-type: none;
-	padding: 0;
-}
 
-.gallery li {
-	display: inline-block;
-	margin: 0 2% 2% 0;
-	border: 5px solid #fff;
-	box-shaped: 0 0 10px #ccc;
-	transtion: border-color .3s;
-}
 
-.gallery li:hover{
-	border-color: #aeccf9;
-}
-#map-location {
-	background: #f3f3f3;
-	background-position: center;
-	height: 250px;
-	transition: background-image 1s;
-}
-
-nav {
-	float: left;
-	width: 250px;
-}
-
-nav ul {
-	margin: 30px 0 0 40px;
-}
-
-nav a {
-	color: #424242;
-	text-decoration: none;
-	display: block;
-	padding: 10px;
-	border: 1px solid #e3e3e3;
-}
-
-nav a:hover {
-	background: #f3f3f3;
-}
-article {
-	margin-left: 300px;
-}
 
 
 
@@ -286,20 +326,66 @@ article {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-
-@media (max-width: 800px) {
-    nav {
-		float: none;
-		width: auto;
+@media (max-width:1115px){
+	#mission_statement {
+		margin: 20px 20px 20px 20px;
+		padding: 5px 5px 5px 5px;
 	}
-	article {
-		margin: 20px;
+	#matt_port {
+		margin: 5px 25px 25px 25px;
+	}
+	#action_center {
+		width: 500px;
 	}
 }
-@media (max-width: 600px) {
-	header {
-		background: url(../img/head_me.jpg);
-		height: 648px;
+@media (max-width:800px){
+    #title {
+		width: 300px;
+	}
+	#header{
+		height: 120px;
+	}
+	nav {
+	padding-left: 5%;
+	}
+	nav a{
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+	nav li {
+		margin-left: 15px;
+	}
+	#action_center {
+		width: 500px;
+	}
+}
+@media (max-width:600px){
+    #title {
+		width: 300px;
+	}
+	#header{
+		height: 120px;
+		padding-left:5px;
+	}
+	#mich_map {
+		width: 120px;
+	}
+	nav {
+		padding-left: none;
+	}
+	nav a{
+		padding-right: 5px;
+		padding-left: 5px;
+	}
+	nav li {
+		margin-left: 5px;
+	}
+	#action_center {
+		width: 400px;
+		margin-left: 25px;
+	}
+	#mission_statement {
+		width: 350px;
 	}
 }
 
